@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wch.e3mal.pojo.TbItem;
+import com.wch.e3mall.common.pojo.EasyUIDataGridResult;
 import com.wch.e3mall.service.ItemService;
 
 @Controller
@@ -22,6 +23,12 @@ public class ItemController {
 		return item;
 	}
 	
+	@RequestMapping("/item/list")
+	@ResponseBody
+	public EasyUIDataGridResult getItemList(Integer page,Integer rows){
+		EasyUIDataGridResult itemList = itemService.getItemList(page, rows);
+		return itemList; 	
+	}
 	
 	
 }
