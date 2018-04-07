@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wch.e3mall.search.mapper.ItemMapper" >
+
+	<select id="getItemList" resultType="com.wch.e3mall.common.pojo.SearchItem">
+		SELECT
+			t1.id,
+			t1.title,
+			t1.sell_point,
+			t1.price,
+			t1.image,
+			t2. NAME category_name
+		FROM
+			tb_item t1
+		LEFT JOIN tb_item_cat t2 ON t1.cid = t2.id
+		WHERE
+			t1. STATUS = 1	
+	</select>
+
+
+</mapper>

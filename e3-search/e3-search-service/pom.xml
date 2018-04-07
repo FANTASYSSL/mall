@@ -2,41 +2,23 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.wch.e3mall</groupId>
-    <artifactId>e3-parent</artifactId>
+    <artifactId>e3-search</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.wch.e3mall</groupId>
-  <artifactId>e3-portal-web</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>e3-search-service</artifactId>
   <packaging>war</packaging>
   
   <dependencies>
 		<dependency>
 			<groupId>com.wch.e3mall</groupId>
-			<artifactId>e3-content-interface</artifactId>
+			<artifactId>e3-manager-dao</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-		<!-- JSP相关 -->
 		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
+			<groupId>com.wch.e3mall</groupId>
+			<artifactId>e3-search-interface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jsp-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<!-- 文件上传组件 -->
-		<!-- <dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-		</dependency> -->
 
 		<!-- Spring -->
 		<dependency>
@@ -67,7 +49,11 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		
 		<!-- dubbo相关 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -83,7 +69,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- zookeeper相关 -->
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
@@ -92,32 +77,11 @@
 			<groupId>com.github.sgroschupf</groupId>
 			<artifactId>zkclient</artifactId>
 		</dependency>
-		<!-- 单元测试 -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-	 	<!-- 分页插件 (解决转json异常)-->
-		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper</artifactId>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
 		</dependency>
 		
 	</dependencies>
-
-	<!-- 配置tomcat插件 -->
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<configuration>
-					<port>8082</port>
-					<path>/</path>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
   
 </project>
