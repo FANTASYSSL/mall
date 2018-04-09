@@ -13,7 +13,7 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
 
-	<context:component-scan base-package="com.wch.e3mall.search.service"/>
+	<context:component-scan base-package="com.wch.e3mall.search.service,com.wch.e3mall.search.dao"/>
 	
 	<!-- 使用dubbo发布服务 -->
 	<!-- 提供方应用信息，用于计算依赖关系 -->
@@ -22,6 +22,7 @@
 	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20882" />
 	<!-- 声明需要暴露的服务接口 -->
-	<!-- <dubbo:service interface="com.wch.e3mall.content.service.ContentCategoryService" ref="contentCategoryServiceImpl" timeout="600000"/> -->
+	<dubbo:service interface="com.wch.e3mall.search.service.SearchItemService" ref="searchItemServiceImpl" timeout="600000"/>
+	<dubbo:service interface="com.wch.e3mall.search.service.SearchService" ref="searchServiceImpl" timeout="600000"/>
 	
 </beans>
