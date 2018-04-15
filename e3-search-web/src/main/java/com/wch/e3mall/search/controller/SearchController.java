@@ -32,6 +32,10 @@ public class SearchController {
 		model.addAttribute("page",page);
 		model.addAttribute("recordCount",result.getRecordCount());
 		model.addAttribute("itemList", result.getItemList());
+		
+		//异常测试
+//		int a = 1/0;
+		
 		return "search";
 	}
 	

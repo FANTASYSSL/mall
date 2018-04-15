@@ -22,6 +22,10 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<!-- 全局异常 -->
+	<bean class="com.wch.e3mall.search.exception.GlobalExceptionResolver" />
+	
 
 	<!-- 定义文件上传解析器 -->
 	<!-- <bean id="multipartResolver"
