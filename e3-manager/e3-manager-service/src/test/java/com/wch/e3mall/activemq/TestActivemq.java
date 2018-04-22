@@ -42,7 +42,7 @@ public class TestActivemq {
 		Connection connection = connectionFactory.createConnection();
 		connection.start();
 		Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-		Queue queue = session.createQueue("teat-queue");
+		Queue queue = session.createQueue("sring-queue");
 		MessageConsumer consumer = session.createConsumer(queue);
 		consumer.setMessageListener(new MessageListener() {
 			

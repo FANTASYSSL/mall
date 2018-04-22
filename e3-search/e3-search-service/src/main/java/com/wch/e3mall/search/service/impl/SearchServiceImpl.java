@@ -14,6 +14,10 @@ public class SearchServiceImpl implements SearchService {
 	@Autowired
 	private SearchDao searchDao;
 
+	/**
+	 * @author: FANTASY
+	 * @Description: 商品搜索
+	 */
 	@Override
 	public SearchResult search(String keywords, int page, int rows) throws Exception {
 		//创建一个SolrQuery对象

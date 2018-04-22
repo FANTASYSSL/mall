@@ -22,8 +22,13 @@ public class SearchItemServiceImpl implements SearchItemService {
 	@Autowired
 	private SolrServer solrServer;
 
+	/**
+	 * @author: FANTASY
+	 * @Description: 同步索引库
+	 */
 	@Override
 	public E3MallResult importAllItems() {
+		
 		List<SearchItem> itemList = itemMapper.getItemList();
 
 		try {

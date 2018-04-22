@@ -19,6 +19,10 @@ public class ItemCatServiceImpl implements ItemCatService {
 	@Autowired
 	private TbItemCatMapper itemCatMapper;
 
+	/**
+	 * @author: FANTASY
+	 * @Description: 查询分类子节点
+	 */
 	public List<EasyUITreeNode> getCatList( long parentId) {
 		
 		// 1、根据parentId查询节点列表
