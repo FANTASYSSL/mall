@@ -51,6 +51,10 @@
 		<property name="connectionFactory" ref="connectionFactory" />
 		<property name="destination" ref="destinationTopic" />
 		<property name="messageListener" ref="itemAddMessageListener" />
+		<!-- 配置多个监听器处理消息(固定数量) -->
+		<!-- <property name="concurrentConsumers" value="6" /> -->
+		<!-- 配置多个监听器处理消息（区间形式） --> 
+		<property name="concurrency" value="1-4" />
 	</bean>
 	
 	

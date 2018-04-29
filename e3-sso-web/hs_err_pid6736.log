@@ -1,0 +1,66 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:211), pid=6736, tid=11092
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_79-b15) (build 1.7.0_79-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000adab000):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=11092, stack(0x000000000c6c0000,0x000000000c7c0000)]
+
+Stack: [0x000000000c6c0000,0x000000000c7c0000]
+
+Current CompileTask:
+C2:  30271 1029   !         org.eclipse.jdt.internal.compiler.parser.Scanner::getNextToken (3636 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000e56a000 JavaThread "DubboClientReconnectTimer-thread-2" daemon [_thread_blocked, id=3140, stack(0x0000000012180000,0x0000000012280000)]
+  0x000000000e566000 JavaThread "http-bio-8088-exec-1" daemon [_thread_in_vm, id=324, stack(0x0000000012080000,0x0000000012180000)]
+  0x000000000e567000 JavaThread "http-bio-8088-AsyncTimeout" daemon [_thread_blocked, id=11680, stack(0x0000000011f80000,0x0000000012080000)]
+  0x000000000e563000 JavaThread "http-bio-8088-Acceptor-0" daemon [_thread_in_native, id=10692, stack(0x0000000011e80000,0x0000000011f80000)]
+  0x000000000dfa8000 JavaThread "ContainerBackgroundProcessor[StandardEngine[Tomcat]]" daemon [_thread_blocked, id=13644, stack(0x0000000011d80000,0x0000000011e80000)]
+  0x000000000dfac000 JavaThread "dubbo-remoting-client-heartbeat-thread-1" daemon [_thread_blocked, id=11668, stack(0x0000000011c80000,0x0000000011d80000)]
+  0x000000000dfaf000 JavaThread "DubboClientHandler-192.168.9.1:20883-thread-1" daemon [_thread_blocked, id=8308, stack(0x0000000011b80000,0x0000000011c80000)]
+  0x000000000dfaa800 JavaThread "Hashed wheel timer #1" [_thread_blocked, id=13672, stack(0x0000000011a80000,0x0000000011b80000)]
+  0x000000000dfa9800 JavaThread "DubboClientReconnectTimer-thread-1" daemon [_thread_blocked, id=2668, stack(0x0000000011980000,0x0000000011a80000)]
+  0x000000000dfad800 JavaThread "New I/O boss #6" daemon [_thread_in_native, id=14840, stack(0x0000000011880000,0x0000000011980000)]
+  0x000000000dfac800 JavaThread "New I/O worker #5" daemon [_thread_in_native, id=5540, stack(0x0000000011780000,0x0000000011880000)]
+  0x000000000dfab000 JavaThread "New I/O worker #4" daemon [_thread_in_native, id=5528, stack(0x0000000011680000,0x0000000011780000)]
+  0x000000000dfa9000 JavaThread "New I/O worker #3" daemon [_thread_in_native, id=5760, stack(0x0000000011580000,0x0000000011680000)]
+  0x000000000dfae000 JavaThread "New I/O worker #2" daemon [_thread_in_native, id=13980, stack(0x0000000011480000,0x0000000011580000)]
+  0x000000000f607000 JavaThread "New I/O worker #1" daemon [_thread_in_native, id=5756, stack(0x0000000011380000,0x0000000011480000)]
+  0x000000000df8c000 JavaThread "DubboSaveRegistryCache-thread-1" daemon [_thread_blocked, id=9076, stack(0x0000000011280000,0x0000000011380000)]
+  0x000000000e548800 JavaThread "localhost-startStop-1-EventThread" daemon [_thread_blocked, id=8340, stack(0x0000000011080000,0x0000000011180000)]
+  0x000000000ed57800 JavaThread "localhost-startStop-1-SendThread(192.168.9.10:2181)" daemon [_thread_in_native, id=1352, stack(0x0000000010f80000,0x0000000011080000)]
+  0x000000000ecd2800 JavaThread "ZkClient-EventThread-19-192.168.9.10:2181" daemon [_thread_blocked, id=7508, stack(0x0000000010e80000,0x0000000010f80000)]
+  0x000000000edf4800 JavaThread "DubboRegistryFailedRetryTimer-thread-1" daemon [_thread_blocked, id=12840, stack(0x0000000010d80000,0x0000000010e80000)]
+  0x00000000101d7800 JavaThread "Thread-2" daemon [_thread_in_native, id=9212, stack(0x0000000010c80000,0x0000000010d80000)]
+  0x000000000da95800 JavaThread "localhost-startStop-1" daemon [_thread_blocked, id=6072, stack(0x000000000ea90000,0x000000000eb90000)]
+  0x000000000da94800 JavaThread "Tomcat-startStop-1" daemon [_thread_blocked, id=4156, stack(0x000000000e990000,0x000000000ea90000)]
+  0x000000000adb1800 JavaThread "Service Thread" daemon [_thread_blocked, id=11444, stack(0x000000000c8c0000,0x000000000c9c0000)]
+  0x000000000adb0800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=1268, stack(0x000000000c7c0000,0x000000000c8c0000)]
+=>0x000000000adab000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=11092, stack(0x000000000c6c0000,0x000000000c7c0000)]
+  0x000000000ad97000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=336, stack(0x000000000c5c0000,0x000000000c6c0000)]
+  0x000000000ad94000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=212, stack(0x000000000c4c0000,0x000000000c5c0000)]
+  0x000000000ad90800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=2664

@@ -11,7 +11,6 @@
   <packaging>war</packaging>
   
   <dependencies>
-   
    		<dependency> 
 			<groupId>com.wch.e3mall</groupId>
 			<artifactId>e3-common</artifactId>
@@ -110,7 +109,11 @@
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper</artifactId>
 		</dependency>
-		
+		<!-- freemarker 模板 -->
+		<dependency>
+				<groupId>org.freemarker</groupId>
+				<artifactId>freemarker</artifactId>
+			</dependency>
 	</dependencies>
 
 	<!-- 配置tomcat插件 -->

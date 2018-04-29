@@ -26,7 +26,7 @@ public class Item extends TbItem {
 			String[] split = images.split(",");
 			return split;
 		}
-		return null;
+		return new String[]{""};
 	}
 
 	

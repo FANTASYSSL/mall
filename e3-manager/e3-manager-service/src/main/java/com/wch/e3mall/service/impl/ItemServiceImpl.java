@@ -125,6 +125,7 @@ public class ItemServiceImpl implements ItemService {
 		TbItemDesc itemDesc = new TbItemDesc();
 		// 5、补全TbItemDesc的属性
 		itemDesc.setItemId(itemId);
+		itemDesc.setItemDesc(desc);
 		itemDesc.setCreated(new Date());
 		itemDesc.setUpdated(new Date());
 		// 6、向商品描述表插入数据'
@@ -176,9 +177,4 @@ public class ItemServiceImpl implements ItemService {
 		return itemDesc;
 	}
 	
-	
-	
-	
-	
-
 }
