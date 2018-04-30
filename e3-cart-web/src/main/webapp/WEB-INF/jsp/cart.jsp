@@ -19,7 +19,7 @@
 <script type="text/javascript" src="/js/jquery.price_format.2.0.min.js"></script>
 <script type="text/javascript" src="/js/jquery.alerts.js?v=20160713"></script>
 <script type="text/javascript" src="/js/cart.js?v=20160713"></script>
- <script type="text/javascript" src="/js/cookie.js?v=20160416222"></script>
+<script type="text/javascript" src="/js/cookie.js?v=20160416222"></script>
 <script type="text/javascript" src="/js/shadow.js?v=20160416"></script>
 <script type="text/javascript" src="/js/common.js"></script>
 
@@ -118,7 +118,7 @@
       </div>
       <div class="cartJsuan">
          <input onclick="javascript:document.location.href='http://localhost:8082'" class="goshop" value="继续购物" type="button">
-         <input onclick="javascript:document.location.href='http://localhost:8091/order/order-cart.html'" class="jiesuan youxuan" value="去结算" type="button">
+         <input onclick="javascript:document.location.href='http://localhost:8092/order/order-cart.html'" class="jiesuan youxuan" value="去结算" type="button">
       </div>
     </div>
 </div>
